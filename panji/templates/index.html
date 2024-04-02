@@ -11,6 +11,7 @@
 
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
         <title>Panji Nugroho Portfolio</title>
     </head>
@@ -51,7 +52,7 @@
                     <img src="{{ home.picture.url }}" alt="" class="home__img">
                 </div>
             </section>
-            
+
             <!--===== ABOUT =====-->
             <section class="about section" id="about">
                 <h2 class="section-title">About</h2>
@@ -67,10 +68,9 @@
                         <p class="about__text">{{ about.description }}</p>
                         <a href="{% static 'assets/file/cv.pdf' %}" class="btn btn-success btn-sm mx-2 my-2">Download CV</a>
                         <div class="about__social">
-                            <a href="https://www.linkedin.com/in/panjinugroho004/" target="_blank" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
-                            <a href="https://github.com/NIxNref" class="about__social-icon"><i target="_blank" class='bx bxl-github' ></i></a>
-                            <a href="https://www.instagram.com/panji.n.047" class="about__social-icon"><i target="_blank" class='bx bxl-instagram' ></i></a>
-
+                            <a href="https://github.com/NIxNref" target="_blank" class="footer__social"><i class='bx bxl-github' ></i></a>
+                            <a href="https://www.instagram.com/panji.n.047" target="_blank" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                            <a href="https://www.linkedin.com/in/panjinugroho004/" target="_blank" class="footer__social"><i class='bx bxl-linkedin' ></i></a>
                         </div>
                     </div>
                 </div>
@@ -80,10 +80,15 @@
             <section class="skills section" id="skills">
                 <h2 class="section-title">Skills</h2>
 
-                <div class="skills__container" style="margin-left: 22vw">
-                    {% for skill in skills %}
-                        <img src="{{ skill.skill_image.url }}" style="max-width: 100px; max-height: 100px; display: inline" alt="">
-                    {% endfor %}
+                <div class="skills__container row justify-content-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" style="width: 110px; height: 110px" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" style="width: 110px; height: 110px" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original-wordmark.svg" style="width: 110px; height: 110px" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" style="width: 110px; height: 110px" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" style="width: 110px; height: 110px" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" style="width: 110px; height: 110px" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" style="width: 110px; height: 110px" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" style="width: 110px; height: 110px" />
                 </div>
             </section>
 
@@ -93,7 +98,7 @@
 
                 <div class="portfolio__container bd-grid">
                     {% for portfolio in portfolios %}
-                        <div class="portfolio__img">
+                        <div class="portfolio__img ">
                             <img src="{{ portfolio.image.url }}" alt="">
                             <div class="portfolio__link">
                                 <a href="{{ portfolio.link }}" class="portfolio__link-name" target="_blank">View details</a>
@@ -108,12 +113,15 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <div class="contact__info">
+                    <div class="contact__info" style="text-decoration: none">
                         <h3 class="contact__subtitle">EMAIL</h3>
-                        <span class="contact__text">pnugroho040@gmail.com</span>
+                        <a href="mailto:pnugroho040@gmail.com" style="text-decoration: none; color: black" class="contact__text">pnugroho040@gmail.com</a>
 
-                        <h3 class="contact__subtitle">PHONE</h3>
-                        <span class="contact__text">+62 852-8074-3642</span>
+                        <h3 class="contact__subtitle">WhatsApp</h3>
+                        <a href="https://api.whatsapp.com/send/?phone=6285280743642" target="_blank" style="text-decoration: none; color: black" class="contact__text">+62 852-8074-3642</a>
+
+                        <h3 class="contact__subtitle">Phone</h3>
+                        <a href="tel:6285280743642" style="text-decoration: none; color: black" class="contact__text">+62 852-8074-3642</a>
                     </div>
                 </div>
             </section>
@@ -137,7 +145,7 @@
                         <li><a href="#Contact" class="footer__link">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer__data">
                     <h2 class="footer__title">FOLLOW</h2>
                     <a href="https://github.com/NIxNref" target="_blank" class="footer__social"><i class='bx bxl-github' ></i></a>
