@@ -18,10 +18,11 @@
 
             /* Handle */
             ::-webkit-scrollbar-thumb {
-            background: #5261fe; 
+            background: #5261fe;
             }
 
             body {
+                width: 100%;
                 overflow-x: hidden;
                 scrollbar-width: thin;
                 scrollbar-color: #5261fe #f3f4f6;
@@ -31,7 +32,7 @@
 
         <title>Panji Nugroho Portfolio</title>
     </head>
-    <body >
+    <body style="overflow-x: hidden;" >
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -82,7 +83,7 @@
                         <h2 class="about__subtitle">{{ about.heading }}</h2>
                         <span class="about__profession">{{ about.career }}</span>
                         <p class="about__text">{{ about.description }}</p>
-                        <a href="{% static 'assets/file/cv.pdf' %}" class="btn btn-success btn-sm mx-2 my-2">Download CV</a>
+                        <a href="{% static 'assets\file\Panji Nugroho.pdf' %}" class="btn btn-outline-success btn-sm my-2">Download CV</a>
                         <div class="about__social">
                             <a href="https://github.com/NIxNref" target="_blank" class="footer__social"><i class='bx bxl-github' ></i></a>
                             <a href="https://www.instagram.com/panji.n.047" target="_blank" class="footer__social"><i class='bx bxl-instagram' ></i></a>
@@ -137,7 +138,7 @@
                         <a href="https://api.whatsapp.com/send/?phone=6285280743642" target="_blank" style="text-decoration: none; color: black" class="contact__text">+62 852-8074-3642</a>
 
                         <h3 class="contact__subtitle">Phone</h3>
-                        <a href="tel:6285280743642" style="text-decoration: none; color: black" class="contact__text">+62 852-8074-3642</a>
+                        <a href="tel:6285782185921" style="text-decoration: none; color: black" class="contact__text">+62 857-8218-5921</a>
                     </div>
                 </div>
             </section>
